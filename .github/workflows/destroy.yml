@@ -31,12 +31,11 @@ jobs:
           version: 0.13.4
 
       # Runs a single command using the runners shell
-      - name: Terraform apply
+      - name: Terraform destroy
         run: |
           terraform init
-          terraform plan
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
       # Runs a set of commands using the runners shell
       - name: Success Messeage
         run: |
-          echo Successfully Created Resources
+          echo Successfully destroy Resources
